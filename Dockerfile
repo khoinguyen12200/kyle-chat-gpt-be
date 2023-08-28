@@ -12,6 +12,7 @@ RUN npm install
 
 #install typescript tsc
 RUN npm install -g typescript
+RUN npm i --save-dev @types/node
 
 # Copy the rest of the application code to the container
 COPY . .
