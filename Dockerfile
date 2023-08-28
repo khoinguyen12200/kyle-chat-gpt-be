@@ -6,17 +6,19 @@ WORKDIR /app
 
 # Copy package.json and package-lock.json to the container
 COPY package*.json ./
+COPY . .
 
 # Install application dependencies
 RUN npm install
+
+RUN ls -la
 
 #install typescript tsc
 RUN npm install -g typescript
 RUN npm i --save-dev @types/node
 
-# Copy the rest of the application code to the container
-COPY . .
 
+RUN yarn build
 # Expose a port for the Node.js application to listen on
 EXPOSE 3333
 
