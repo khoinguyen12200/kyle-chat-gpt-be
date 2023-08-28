@@ -10,6 +10,8 @@ services:
       - "3333:3333"
     networks:
       - hofi_network
-volumes:
-  mongodb_data:
+
+networks:
+  hofi_network:
+    external: true
 
