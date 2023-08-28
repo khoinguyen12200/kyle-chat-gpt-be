@@ -10,6 +10,9 @@ COPY package*.json ./
 # Install application dependencies
 RUN npm install
 
+#install typescript tsc
+RUN npm install -g typescript
+
 # Copy the rest of the application code to the container
 COPY . .
 
