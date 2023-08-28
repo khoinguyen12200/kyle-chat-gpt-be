@@ -6,8 +6,9 @@
   "author": "khoinguyen12200 <khoi.nguyen12200@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node src/app.ts",
-    "dev": "nodemon src/app.ts"
+    "dev": "nodemon src/app.ts",
+    "build": "tsc -p .",
+    "start": "node dist/app.js"
   },
   "dependencies": {
     "dotenv": "^16.3.1",
