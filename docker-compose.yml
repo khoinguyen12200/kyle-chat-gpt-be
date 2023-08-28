@@ -8,7 +8,8 @@ services:
       - .:/app
     ports:
       - "3333:3333"
-
+    networks:
+      - hofi_network
 volumes:
   mongodb_data:
 
